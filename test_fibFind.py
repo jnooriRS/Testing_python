@@ -1,17 +1,16 @@
-from distutils.log import error
 import unittest
 
-from fibfind import fibArray
+from fibfind import fibFind
 
 
 class TestFibonnaciResult(unittest.TestCase):
     def test_number(self):
-        self.assertEqual(fibArray(1) == 1),
-        self.assertEqual(fibArray(2) == 2),
-        self.assertEqual(fibArray(5) == 8)
+        self.assertEqual(fibFind(5), 5)
+        self.assertEqual(fibFind(6), 8)
+        self.assertEqual(fibFind(7), 13)
 
-    # def test_input_type(self):
-    #     self.assertTrue(fibArray("some-string") == error)
+    def test_input_type(self):
+        self.assertRaises(TypeError, fibFind, "some-string")
 
 
 if __name__ == "__main__":

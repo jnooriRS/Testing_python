@@ -9,7 +9,7 @@ def fibFind(N):
         num1 = num2
         num2 = fib_num
         find = find + 1
-    print(find)
+    return fib_num
 
 
-fibFind(7)
+print(fibFind(5))
